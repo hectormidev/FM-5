@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --paragraph: 16px;
+    --border-radius: 1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Pale-blue);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card{
+    background-color: var(--Very-pale-blue);
+    border-radius: var(--border-radius);
+    width: 20rem;
+}
+
+.card__img{
+    width: 100%;
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+.img-desktop{
+    display: none;
+}
+
+.card__info{
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card__info h2{
+    margin: 0;
+    color: var(--Dark-blue);
+}
+
+.card__info p{
+    color: var(--Desaturated-blue);
+}
+
+.card__info-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.flex-plan__icon{
+    width: 100%;
+    flex: 2;
+}
+
+.flex-plan__text h3{
+    color: var(--Dark-blue);
+    font-size: .7rem;
+    font-weight: 900;
+}
+
+.flex-plan__text span{
+    color: var(--Desaturated-blue);
+    font-size: .7rem;
+}
+
+.flex-change{
+    font-size: .7rem;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn{
+    color: var(--Very-pale-blue);
+    background-color: var(--Bright-blue);
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: .8rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+.btn:hover{
+    background-color: var(--Desaturated-blue);
+}
+
+.card__info a{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    cursor: pointer;
+    font-weight: 700;
+    transition: color .5s;
+}
+
+.card__info a:hover{
+    color: var(--Dark-blue);
+}
+
+/* FOOTER */
+footer{
+    color: var(--Bright-blue);
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--Bright-blue);
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 360px) {
+    body{
+        background-color: var(--Pale-blue);
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+}
